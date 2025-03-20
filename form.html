@@ -1,35 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Maling</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Maling
-
-    </title>
-</head>
-
-<body>
-    <form action="index.js" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="write a username" minlength="3" maxlength="10" required>
+  <body>
+    <form action="index.js" method="POST" enctype="multipart/form-data">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="write a username"
+        minlength="3"
+        maxlength="10"
+        required
+      />
+      <br />
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="test@gmail.com"
+        minlength="3"
+        required
+      />
+      <br />
+      <label for="phone">Mobile No:</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="+91 9850465360"
+        minlength="9"
+        maxlength="10"
+        required
+      />
+      <br />
+      <label for="birthdate">Birth Date:</label>
+      <input type="date" id="birthdate" />
+      <br />
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="0" max="30" value="1" />
+      <br />
+      <label for="title">Title:</label>
+      <label for="Mr.">Mr.</label>
+      <input type="radio" id="Mr." value="Mr." name="title" />
+      <label for="Mrs.">Mrs.</label>
+      <input type="radio" id="Mrs." value="Mrs."name="title" />
+      <label for="Dr.">Dr.</label>
+      <input type="radio" id="Dr." value="Dr." name="title"/>
+      <br />
+      <label for="payment">Type of Payment:</label>
+      <select id = "payment">
+        <option value="Visa">Visa</option>
+        <option value="UPI">UPI</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+      </select>
 <br>
-        <label for="password">Password:</label>
-        <input type="text" id="password" placeholder="write a username" minlength="3" maxlength="10" required><br>
-        <input type="reset" style="font-family: 'Times New Roman', Times, serif;">
-        <input type="submit">
-        <br>
-        <table border="4">
-            <tr>
-                <th>Username</th>
-                <th>Password</th>
-            </tr>
-            <tr>
-                <td>amol@123</td>
-                <td>amol@123</td>
-            </tr>
-        </table>
+      <label for="subscribe">Subscribe</label>
+      <input type="checkbox" id="subscribe">
+<br>
+<label for="comment">Comment</label>
+<textarea id="comment" rows="3" cols="25"></textarea>
+<br>
+<label for="file">Upload file</label>
+<input type="file" id="file" accept="image/png,image/jpeg" >
+<br>
+      <label for="password">Password:</label>
+      <input
+        type="text"
+        id="password"
+        placeholder="Enter a password"
+        minlength="3"
+        maxlength="10"
+        required
+      /><br />
+      <input
+        type="reset"
+        style="font-family: 'Times New Roman', Times, serif"
+      />
+      <input type="submit" />
+      <br />
+      <table border="4">
+        <tr>
+          <th>Username</th>
+          <th>Password</th>
+        </tr>
+        <tr>
+          <td>amol@123</td>
+          <td>amol@123</td>
+        </tr>
+      </table>
     </form>
-</body>
-
+  </body>
 </html>
